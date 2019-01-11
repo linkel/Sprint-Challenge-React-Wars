@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 .Header {
   color: #443e3e;
@@ -14,7 +15,9 @@
   list-style: none;
   max-width: 1000px;
   margin: 0 auto;
+  transform: translateX(-15px);
 }
+
 li {
   width: 600px;
   background-color: rgb(41, 37, 37);
@@ -31,5 +34,25 @@ li {
   opacity: 0.8;
 }
 li:hover {
+  background-color: rgb(37, 22, 5);
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(41, 37, 37);
+  margin: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in-out;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #FAFAFA;
+  border: 3px solid rgb(212, 199, 199);
+  padding: 0 10px 0 10px;
+  opacity: 0.8;
+}
+
+button:hover {
   background-color: rgb(117, 94, 67);
 }
