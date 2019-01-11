@@ -1,8 +1,95 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 .Header {
   color: #443e3e;
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+
+.character-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  transform: translateX(-15px);
+}
+
+li {
+  width: 600px;
+  background-color: rgb(41, 37, 37);
+  margin: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in-out;
+  display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: #FAFAFA;
+	border: 3px solid #FAFAFA;
+  padding: 25px;
+  opacity: 0.8;
+}
+li:hover {
+  background-color: rgb(37, 22, 5);
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(41, 37, 37);
+  margin: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.1s ease-in-out;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #FAFAFA;
+  border: 3px solid rgb(212, 199, 199);
+  padding: 0 10px 0 10px;
+  opacity: 0.8;
+}
+
+button:hover {
+  background-color: rgb(117, 94, 67);
+}
+
+.loader {
+  height: 2px;
+  margin: 0 auto;
+  width: 10%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(56, 50, 50);
+}
+.loader:before{
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 4px;
+  background-color: #ffffff;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}
+
+.loader-notmove {
+  height: 2px;
+  width: 10%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(56, 50, 50);
+}
